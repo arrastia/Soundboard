@@ -1,7 +1,9 @@
-import { Text, TouchableOpacity } from 'react-native';
+import { Dimensions, Text, TouchableOpacity } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 import styled from 'styled-components/native';
+
+const { height, width } = Dimensions.get('screen');
 
 const Button = styled(TouchableOpacity)`
   background-color: ${Colors.darker};
@@ -15,4 +17,22 @@ const Emoji = styled(Text)`
   font-size: 20px;
 `;
 
-export const Styles = { Button, Emoji };
+const Board = styled.ScrollView.attrs(() => ({
+  contentContainerStyle: {
+    alignSelf: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    width: width * 0.95
+  }
+}))``;
+
+export const Styles = { Button, Emoji, Board };
+
+// align-self: 'center';
+//     background-color: ${Colors.darker};
+//     border-radius: 10;
+//     flex-direction: 'row';
+//     flex-wrap: 'wrap';
+//     margin-top: 20;
+//     padding: 10;
+//     width: ${width * 0.9};

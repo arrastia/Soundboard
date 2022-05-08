@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar, useColorScheme } from 'react-native';
+import { SafeAreaView, StatusBar, StyleProp, useColorScheme, ViewStyle } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 import { Styles } from './Soundboard.styles';
@@ -15,8 +15,9 @@ interface ISound {
 export const Soundboard = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.black : Colors.lighter
+  const backgroundStyle: StyleProp<ViewStyle> = {
+    backgroundColor: isDarkMode ? Colors.black : Colors.lighter,
+    height: '100%'
   };
 
   const renderItem = (item: ISound) => (
@@ -28,9 +29,9 @@ export const Soundboard = () => {
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
+      <Styles.Board contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
         {sounds.map((sound: ISound) => renderItem(sound))}
-      </ScrollView>
+      </Styles.Board>
     </SafeAreaView>
   );
 };
