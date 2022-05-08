@@ -15,7 +15,7 @@ export const Home = ({ navigation }: any) => {
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
-        <Button onPress={() => navigation.navigate('Profile', { name: 'Jane' })} title="Go to Jane's profile" />
+        <Button onPress={() => navigation.navigate('Soundboard', { name: 'Jane' })} title="Go to Jane's Soundboard" />
         <Header />
         <View style={{ backgroundColor: isDarkMode ? Colors.black : Colors.white }}>
           <Section title="Step One">
