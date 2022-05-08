@@ -21,6 +21,8 @@ target 'soundboard' do
 
   pod 'RNSound', :path => '../node_modules/react-native-sound'
 
+  pod 'RNReactNativeHapticFeedback', :path => '../node_modules/react-native-haptic-feedback'
+
   target 'soundboardTests' do
     inherit! :complete
     # Pods for testing
