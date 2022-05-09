@@ -19,6 +19,7 @@
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "comma-dangle": ["off", "always-multiline"],
+    "curly": "off",
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react/jsx-key": "error",

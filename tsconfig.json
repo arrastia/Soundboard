@@ -28,10 +28,10 @@
       "ui": ["./src/ui"],
       "ui/*": ["./src/ui/*"],
       "utils": ["./src/utils"],
-      "utils/*": ["./src/utils/*"]
+      "utils/*": ["./src/utils/*"],
+      "react-native-redash/lib/module/v1": ["./node_modules/react-native-redash/lib/typescript/v1/index.d.ts"]
     },
     "resolveJsonModule": true
   },
-  "include": ["node_modules/react-native-redash/lib/typescript/v1/index.d.ts"],
   "exclude": ["ios", "patches/reanimated", "node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }
