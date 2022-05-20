@@ -17,5 +17,5 @@ export const useInteraction = () => {
 
   useEffect(() => () => removeInteractionHandle());
 
-  return [createInteractionHandle, removeInteractionHandle, interactionHandle];
+  return [createInteractionHandle, removeInteractionHandle, interactionHandle] as const;
 };
