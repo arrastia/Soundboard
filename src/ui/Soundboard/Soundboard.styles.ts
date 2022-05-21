@@ -1,11 +1,13 @@
 import { Dimensions, Text, TouchableOpacity } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { ButtonPressAnimationJS } from '../../components/ButtonPressAnimationJS/ButtonPressAnimationJS';
 
 import styled from 'styled-components/native';
+import { Button as SButton } from '../../components/Button';
 
 const { height, width } = Dimensions.get('screen');
 
-const Button = styled(TouchableOpacity)`
+const Button = styled(SButton)`
   background-color: ${Colors.darker};
   border-radius: 10px;
   margin: 5px;
