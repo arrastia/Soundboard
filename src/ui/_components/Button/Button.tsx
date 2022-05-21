@@ -26,6 +26,8 @@ export const Button = ({
   activeOpacity,
   children,
   duration,
+  disabled,
+  onLayout,
   hapticType,
   isInteraction,
   minLongPressDuration,
@@ -140,7 +142,7 @@ export const Button = ({
   );
 
   return (
-    <AnimatedRawButton>
+    <AnimatedRawButton enabled={!disabled} onHandlerStateChange={onGestureEvent} onLayout={onLayout}>
       <Animated.View
         accessible
         onLayout={measureInnerElement}
@@ -158,4 +160,13 @@ export const Button = ({
       </Animated.View>
     </AnimatedRawButton>
   );
+};
+
+Button.defaultProps = {
+  activeOpacity: 1,
+  duration: 160,
+  enableHapticFeedback: true,
+  hapticType: 'selection',
+  minLongPressDuration: 500,
+  scaleTo: 0.86
 };
