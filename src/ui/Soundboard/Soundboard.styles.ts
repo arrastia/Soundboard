@@ -1,9 +1,9 @@
 import { Dimensions, Text, TouchableOpacity } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { ButtonPressAnimationJS } from '../../components/ButtonPressAnimationJS/ButtonPressAnimationJS';
+// import { ButtonPressAnimationJS } from '../../components/ButtonPressAnimationJS/ButtonPressAnimationJS';
 
 import styled from 'styled-components/native';
-import { Button as SButton } from '../../components/Button';
+import { Button as SButton } from '../_components/Button';
 
 const { height, width } = Dimensions.get('screen');
 

@@ -24,7 +24,7 @@ export const Soundboard = () => {
   };
 
   const renderItem = (item: ISound) => (
-    <Styles.Button key={item.id} onLongPress={() => console.log('hey')}>
+    <Styles.Button key={item.id} onLongPress={() => console.log('hey')} onPress={() => 'hey otro'}>
       <Styles.Emoji>{item.label}</Styles.Emoji>
     </Styles.Button>
   );
